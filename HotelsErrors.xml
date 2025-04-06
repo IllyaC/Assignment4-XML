@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotel> 
+<Hotel> <!--  ERROR 1: Root tag should be <Hotels> -->
   <Hotel Rating="4.2">
     <Name>Westin</Name>
     <Phone>480-968-8885</Phone>
@@ -12,116 +12,117 @@
       <Zip>85281</Zip>
     </Address>
   </Hotel>
-  
+
   <Hotel>
-    <Name>Hyatt Regency</Name>
-    <Phone>602-252-1234</Phone>
-    <Address> 
-      <Number>122</Number>
-      <Street>N 2nd St</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-      <Zip>85004</Zip>
+    <Name>Hotel Theodore</Name>
+    <Phone>206-621-1200</Phone>
+    <Address> <!--  ERROR 2: Missing required attribute "NearstAirport" -->
+      <Number>1531</Number>
+      <Street>7th Ave</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98101</Zip>
     </Address>
   </Hotel>
-  
-  <Hotel Rating="3.8">
-    <Name>Hilton Garden Inn</Name>
-   
-    <Address NearstAirport="Phoenix-Mesa Gateway">
-      <Number>3838</Number>
-      <Street>E Van Buren St</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-      <Zip>85008</Zip>
+
+  <Hotel Rating="4.2">
+    <Name>Thompson Seattle</Name>
+    <!--  ERROR 3: Missing all <Phone> elements -->
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>110</Number>
+      <Street>Stewart St</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98101</Zip>
     </Address>
   </Hotel>
-  
-  <Hotel>
-    <Name>Marriott Downtown</Name>
-    <Phone>602-333-0000</Phone>
-    <Address NearstAirport="Sky Harbor">
-      <Number>340</Number>
-      <Street>N 3rd St</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-     
-      <Zip>85004
-    </Address>
-  </Hotel>
-  
+
   <Hotel Rating="4.0">
-    <Name>Residence Inn</Name>
-    <Name>ShouldNotExist</Name>
-    <Phone>480-967-2300</Phone>
-    <Address NearstAirport="Phoenix Sky Harbor">
-      <Number>6040</Number>
-      <Street>S Price Rd</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85283</Zip>
-    </Address>
-  </Hotel>
-
-  <!-- Remaining hotels are fine, added to match count -->
-  <Hotel Rating="3.9">
-    <Name>Aloft Tempe</Name>
-    <Phone>480-621-3300</Phone>
-    <Phone>888-625-4988</Phone>
-    <Address NearstAirport="Phoenix Sky Harbor">
-      <Number>951</Number>
-      <Street>E Playa Del Norte Dr</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
+    <Name>Hotel Max</Name>
+    <Phone>206-728-6299</Phone>
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>620</Number>
+      <Street>Stewart St</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <!--  ERROR 4: Missing closing tag for <Zip> -->
+      <Zip>98101
     </Address>
   </Hotel>
 
   <Hotel>
-    <Name>Hotel Valley Ho</Name>
-    <Phone>480-248-2000</Phone>
-    <Address NearstAirport="Phoenix Sky Harbor">
-      <Number>6850</Number>
-      <Street>E Main St</Street>
-      <City>Scottsdale</City>
-      <State>AZ</State>
-      <Zip>85251</Zip>
+    <!--  ERROR 5: Duplicate <Name> elements -->
+    <Name>Kimpton Hotel Monaco</Name>
+    <Name>Should Not Exist</Name>
+    <Phone>206-621-1770</Phone>
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>1101</Number>
+      <Street>4th Ave</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98101</Zip>
     </Address>
   </Hotel>
 
-  <Hotel Rating="4.1">
-    <Name>Omni Scottsdale</Name>
-    <Phone>480-627-3200</Phone>
-    <Address NearstAirport="Scottsdale Airport">
-      <Number>4949</Number>
-      <Street>E Lincoln Dr</Street>
-      <City>Scottsdale</City>
-      <State>AZ</State>
-      <Zip>85253</Zip>
-    </Address>
-  </Hotel>
-
-  <Hotel>
-    <Name>DoubleTree by Hilton</Name>
-    <Phone>480-967-1441</Phone>
-    <Address NearstAirport="Sky Harbor">
-      <Number>2100</Number>
-      <Street>S Priest Dr</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85282</Zip>
-    </Address>
-  </Hotel>
-
+  <!-- Remaining entries are unchanged for count and realism -->
   <Hotel Rating="4.3">
-    <Name>Courtyard by Marriott</Name>
-    <Phone>480-966-2800</Phone>
-    <Address NearstAirport="Phoenix Sky Harbor">
-      <Number>601</Number>
-      <Street>S Ash Ave</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
+    <Name>Pan Pacific Seattle</Name>
+    <Phone>206-264-8111</Phone>
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>2125</Number>
+      <Street>Terry Ave</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98121</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Staypineapple Hotel FIVE</Name>
+    <Phone>206-441-9785</Phone>
+    <Phone>866-866-7977</Phone>
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>2200</Number>
+      <Street>5th Ave</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98121</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="3.9">
+    <Name>Executive Hotel Pacific</Name>
+    <Phone>206-623-3900</Phone>
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>400</Number>
+      <Street>Spring St</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98104</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>The Sound Hotel Seattle</Name>
+    <Phone>206-441-7456</Phone>
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>2120</Number>
+      <Street>4th Ave</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98121</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.4">
+    <Name>Four Seasons Hotel Seattle</Name>
+    <Phone>206-749-7000</Phone>
+    <Address NearstAirport="Seattle-Tacoma International Airport">
+      <Number>99</Number>
+      <Street>Union St</Street>
+      <City>Seattle</City>
+      <State>WA</State>
+      <Zip>98101</Zip>
     </Address>
   </Hotel>
 </Hotel>
